@@ -1,0 +1,132 @@
+/* Páginas públicas do Gyrus (GitHub Pages). Cores iguais aos tokens do app
+   (GyrusKit/Resources/Colors.xcassets/gy), claro e escuro. Fonte do sistema:
+   nada é carregado de fora. */
+
+:root {
+  --background: #F6F3EE;
+  --surface: #FFFFFF;
+  --separator: #E3DFD8;
+  --text-primary: #1D1B18;
+  --text-secondary: #77726A;
+  --accent: #5B5FC7;
+  --accent-soft: #EEEEFB;
+  --radius-card: 20px;
+  --radius-field: 14px;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #141311;
+    --surface: #1E1C1A;
+    --separator: #34312D;
+    --text-primary: #F3F0EA;
+    --text-secondary: #A39D93;
+    --accent: #8C8FF0;
+    --accent-soft: #26274A;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text-primary);
+  font: 17px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+main {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 40px 20px 64px;
+}
+
+header.marca {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+header.marca img { width: 40px; height: 40px; border-radius: 10px; }
+
+header.marca a {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+h1 {
+  font-size: 34px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 8px;
+}
+
+h2 {
+  font-size: 22px;
+  margin: 36px 0 8px;
+  letter-spacing: -0.01em;
+}
+
+h3 { font-size: 17px; margin: 20px 0 4px; }
+
+p, li { margin: 8px 0; }
+ul { padding-left: 22px; }
+
+a { color: var(--accent); }
+
+.atualizacao, .secundario { color: var(--text-secondary); font-size: 15px; }
+
+.cartao {
+  background: var(--surface);
+  border: 0.5px solid var(--separator);
+  border-radius: var(--radius-card);
+  padding: 4px 20px;
+  margin: 16px 0;
+}
+
+details {
+  border-top: 0.5px solid var(--separator);
+  padding: 14px 0;
+}
+
+details:first-child { border-top: none; }
+
+summary {
+  cursor: pointer;
+  font-weight: 600;
+  list-style-position: outside;
+}
+
+details > *:not(summary) { color: var(--text-primary); }
+
+/* Trechos que o Rafael precisa preencher antes de publicar. */
+mark.pendente {
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-radius: 4px;
+  padding: 0 3px;
+}
+
+nav.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 0.5px solid var(--separator);
+  font-size: 15px;
+}
+
+nav.links a { color: var(--text-secondary); }
+nav.links a[aria-current="page"] { color: var(--text-primary); font-weight: 600; text-decoration: none; }
+
+.inicio { text-align: center; padding-top: 12vh; }
+.inicio img { width: 96px; height: 96px; border-radius: 22px; }
+.inicio h1 { font-size: 40px; margin-top: 20px; }
+.inicio .slogan { color: var(--text-secondary); font-size: 19px; margin: 0 0 32px; }
+.inicio nav.links { justify-content: center; border-top: none; margin-top: 24px; }
