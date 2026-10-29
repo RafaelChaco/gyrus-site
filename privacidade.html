@@ -26,10 +26,11 @@
 
   <h2>Quais dados o Gyrus usa</h2>
   <ul>
-    <li><strong>E-mail</strong>: para você entrar na sua conta, com um código enviado por e-mail ou pela Apple.</li>
+    <li><strong>E-mail</strong>: para você entrar na sua conta, com senha, pela Apple ou pelo Google. Mandamos códigos para esse e-mail ao criar a conta e para criar uma senha nova.</li>
     <li><strong>Dados do login com a Apple</strong>, se você usar: um identificador da sua conta Apple, o seu e-mail (pode ser um endereço privado da Apple, se você escolher ocultar o seu) e, só no primeiro acesso, o seu nome.</li>
+    <li><strong>Dados do login com o Google</strong>, se você usar: um identificador da sua conta Google, o seu e-mail, o seu nome e o endereço da sua foto de perfil (o Gyrus não mostra nem usa a foto).</li>
     <li><strong>Nome</strong>: opcional. Aparece só no seu perfil, e você pode mudar quando quiser.</li>
-    <li><strong>Senha</strong>: só se a sua conta tiver uma. Ela é guardada apenas de forma cifrada (hash), nunca como texto.</li>
+    <li><strong>Senha</strong>: se você entra com e-mail. Ela é guardada apenas de forma cifrada (hash), nunca como texto.</li>
     <li><strong>O que você salva</strong>: links e os dados que o app lê das páginas (título, descrição, imagem, preço, duração), suas notas, textos, PDFs, imagens, o texto extraído dos PDFs e as categorias que você cria.</li>
     <li><strong>Identificador da conta</strong>: um código interno que liga o seu conteúdo à sua conta.</li>
     <li><strong>Token de acesso para IAs</strong>: só se você gerar um. Guardamos apenas uma versão cifrada (hash), nunca o token em si. Uma cópia fica no Keychain do seu iPhone.</li>
@@ -43,11 +44,12 @@
   <h2>Onde os dados ficam e com quem são compartilhados</h2>
   <ul>
     <li><strong>Supabase</strong> (banco de dados, arquivos e login), com os dados guardados em servidores na região de São Paulo, Brasil.</li>
-    <li><strong>Brevo</strong>, só para enviar o e-mail com o seu código de acesso. Recebe o seu e-mail e a mensagem com o código.</li>
+    <li><strong>Brevo</strong>, só para enviar os e-mails com os seus códigos (confirmação da conta e senha nova). Recebe o seu e-mail e a mensagem com o código.</li>
     <li><strong>Apple</strong>, se você entrar com a Apple.</li>
+    <li><strong>Google</strong>, se você entrar com o Google.</li>
     <li><strong>IAs que você conectar</strong> (como o Claude, da Anthropic, ou o ChatGPT, da OpenAI). Antes de conectar, o app mostra o que a IA vai poder ler e pede a sua permissão. Com o token ativo, a IA pode ler, quando consultar o seu Gyrus: título, descrição, site, link e preço dos itens; suas notas e categorias; o texto dos PDFs e dos textos salvos; e as imagens, as miniaturas e os arquivos. O acesso é só de leitura: a IA não altera nem apaga nada. O que cada IA faz com esses dados segue a política de privacidade dela.</li>
   </ul>
-  <p>Algumas dessas empresas ficam fora do Brasil (a Supabase e a Apple nos Estados Unidos, a Brevo na França), e parte dos dados pode passar por servidores no exterior, como o e-mail com o código. Essas transferências servem só para prestar o serviço, como permite a LGPD (art. 33).</p>
+  <p>Algumas dessas empresas ficam fora do Brasil (a Supabase, a Apple e o Google nos Estados Unidos, a Brevo na França), e parte dos dados pode passar por servidores no exterior, como o e-mail com o código. Essas transferências servem só para prestar o serviço, como permite a LGPD (art. 33).</p>
   <p>Para mostrar o título e a imagem de um link, o próprio iPhone acessa a página que você salvou, como faria o navegador. Quando você salva uma página aberta no Safari, o app lê essa página no próprio iPhone; o conteúdo dela não vai para os nossos servidores. Também podemos compartilhar dados quando a lei ou uma autoridade competente exigir.</p>
 
   <h2>Por quanto tempo</h2>
